@@ -1,0 +1,418 @@
+# VISUAL_DESIGN_VOCABULARY_SYSTEM.md
+> **System Architecture & Prompt Engineering Framework for AI Visual Generation & UI/UX Direction**  
+> *Optimized for LLM context injection (Claude Projects, Custom GPTs, System Prompts) and Image Diffusion Models (Midjourney v6+, Flux.1, Stable Diffusion XL, DALL-E 3).*
+
+---
+
+## 1. Operating Instructions for Claude / Vision LLM
+
+When acting as a **Visual Design Copilot**, **Creative Director**, or **Generative AI Prompt Architect**, adhere to the following rules:
+
+1. **Eliminate Abstract Mood Ambiguity:** Never accept or output prompts with unanchored adjectives like *"clean"*, *"dreamy"*, *"futuristic"*, or *"modern"*. Deconstruct them into concrete parameters: **Art Movement**, **Lighting Schema**, **Surface Materiality**, **Color Harmony**, and **Composition Geometry**.
+2. **Translate Intent to Style DNA:** When a user expresses a vague aesthetic intent, map it to one or more of the 50 foundational design styles cataloged below.
+3. **Prompt Structuring Standard for Diffusion Models:** When generating image generation prompts (Midjourney/Flux/SDXL), always use the **Prompt Formula**:
+   $$\text{[Subject]} + \text{[Historical/Design Style Token]} + \text{[Layout / Perspective]} + \text{[Materials / Textures]} + \text{[Lighting & Color Palette]} + \text{[Rendering Engine / Camera Specs]}$$
+
+---
+
+## 2. The Abstract-to-Concrete Translation Matrix
+
+Use this dictionary to convert vague client adjectives into technical visual parameters:
+
+| Vague Descriptor | Underlying Design Style | AI Trigger Keywords & Visual Specifics |
+| :--- | :--- | :--- |
+| *"Clean / Minimal"* | Bauhaus / Utilitarian / Japandi | Asymmetric balance, strict grid system, unornamented grotesque sans-serif, high negative space, raw matte finishes. |
+| *"Dreamy / Soft"* | Ethereal / Aurora / Light Academia | Subsurface scattering, gauzy ray-traced volume lights, low-contrast feathered shadows, chromatic bloom, pastel wash. |
+| *"Futuristic"* | Cybercore / Synthwave / Neo Frutiger Aero | Luminescent fiber-optics, hard-surface glass, specular highlights, dark mode with neon accents, volumetric fog. |
+| *"Luxury / High-End"* | Neoclassical / Art Deco / Luxury Typography | High letter-spaced Didone serifs, brushed brass, veined Carrara marble, deep chiaroscuro, gold foil stamping. |
+| *"Edgy / Raw"* | Brutalism / Neo-Brutalism / Graffiti | Monospaced typography, exposed canvas grids, heavy black structural borders (`border: 3px solid #000`), xerox distortion. |
+| *"Nostalgic"* | Y2K / Vaporwave / Mid-Century | Chromatic aberration, VHS scanlines, halftone dot rasterization, warm Kodachrome 64 color profile. |
+
+---
+
+## 3. The Master Taxonomy: 50 Design Styles
+
+```
+MASTER INDEX OF STYLES
+├── PILLAR 1: Historical, Classical & High Ornamentation (1–8)
+├── PILLAR 2: Modernist, Structural & Architectural (9–17)
+├── PILLAR 3: Retro-Futurism, Tech Revival & Digital (18–25)
+├── PILLAR 4: Organic, Tactile & Serene Atmospheres (26–33)
+├── PILLAR 5: Youth Culture, Subversion & Pop (34–41)
+└── PILLAR 6: Niche Narrative, Worldbuilding & Sub-Aesthetics (42–50)
+```
+
+---
+
+### PILLAR 1: Historical, Classical & High Ornamentation
+
+#### 01. Neoclassical
+* **Historical Origin:** 18th-century European revival of classical Greece and Rome.
+* **Core Identifiers:** Strict bilateral symmetry, Greco-Roman architectural orders (Ionic, Corinthian), laurel wreaths, fluted columns, low-saturation marble.
+* **Palette:** Carrara white, stone grey, antique gold, imperial navy, muted terracotta.
+* **Prompt Injection Keywords:** `Neoclassical style, Greco-Roman architecture, Corinthian columns, bilateral symmetry, Didone serif typography, Carrara marble texture, gold leaf filigree, studio rim lighting, timeless editorial composition`.
+
+#### 02. Baroque
+* **Historical Origin:** 17th-century European counter-reformation art.
+* **Core Identifiers:** Intense theatrical drama, explosive visual movement, rich heavy drapery, curved ornamental flourishes, extreme contrast.
+* **Palette:** Deep crimson, burnt umber, royal gold, obsidian, deep bronze.
+* **Prompt Injection Keywords:** `Baroque aesthetic, extreme chiaroscuro, dramatic Caravaggio lighting, heavy gold leaf gilding, opulent ornamental flourishes, dynamic diagonal motion, theatrical atmosphere, hyper-detailed oil painting`.
+
+#### 03. Victorian
+* **Historical Origin:** 19th-century British industrial/imperial era.
+* **Core Identifiers:** Heavy ornamental complexity, damask and filigree wall patterns, engraved flourishes, dense visual framing, cast-iron motifs.
+* **Palette:** Deep forest green, burgundy, deep plum, brass, tarnished gold.
+* **Prompt Injection Keywords:** `Victorian era aesthetic, ornate wood carving, damask wallpaper pattern, engraved lithograph line work, vintage brass accents, dark moody study lighting, historical depth`.
+
+#### 04. Gothic
+* **Historical Origin:** 12th–16th century European ecclesiastical architecture & late Romanticism.
+* **Core Identifiers:** Ogival (pointed) arches, ribbed vaults, stained glass illumination, blackletter typography, stone gargoyles, verticality.
+* **Palette:** Jet black, charcoal slate, blood red, royal amethyst, aged cathedral stone.
+* **Prompt Injection Keywords:** `Gothic revival style, pointed arches, stained glass rose window, blackletter calligraphy, stone texture, high contrast shadows, mist, raytraced atmospheric fog`.
+
+#### 05. Tenebrism
+* **Historical Origin:** 17th-century painting school popularized by Caravaggio.
+* **Core Identifiers:** Heightened chiaroscuro where darkness dominates; spotlight effect slicing across the subject; pitch-black non-descript background.
+* **Palette:** Pitch black (`#000000`), warm amber, ochre highlights, skin tones illuminated through deep shadows.
+* **Prompt Injection Keywords:** `Tenebrism style, Caravaggesque lighting, deep opaque black backgrounds, directional spotlighting, extreme light-to-dark contrast, painterly oil texture, hyper-dramatic chiaroscuro`.
+
+#### 06. Art Nouveau
+* **Historical Origin:** Late 19th-century decorative arts reaction against academic art.
+* **Core Identifiers:** Sinuous, whiplash lines, sinuous botanical structures, Alphonse Mucha-style framing, hand-drawn flowing typography, organic asymmetry.
+* **Palette:** Sage green, mustard, peacock blue, dusty rose, burnt copper.
+* **Prompt Injection Keywords:** `Art Nouveau style, Alphonse Mucha illustration, sinuous whiplash lines, organic botanical framing, flowing curvilinear forms, stained glass flat color fills, vintage lithograph texture`.
+
+#### 07. Art Deco
+* **Historical Origin:** 1920s interwar Paris & New York decorative movement.
+* **Core Identifiers:** Streamlined industrial geometric shapes, chevron/sunburst patterns, stepped structural facades, metallic inlays, luxurious symmetry.
+* **Palette:** High-polish chrome, black obsidian, burnished gold, deep emerald, sapphire.
+* **Prompt Injection Keywords:** `Art Deco movement, Chrysler building geometry, stepped chevrons, sunburst motifs, polished gold and obsidian chrome, symmetrical luxury typography, 1920s Gatsby glamour`.
+
+#### 08. Filigree & Acanthus
+* **Historical Origin:** Classical architectural stonework & fine goldsmithing.
+* **Core Identifiers:** Intertwined curling leaf forms (Acanthus mollis), lacework metal wires, curling tendrils, continuous relief patterns.
+* **Palette:** Gilded yellow gold, antique silver, patinated bronze, muted plaster white.
+* **Prompt Injection Keywords:** `Intricate acanthus leaf ornamentation, fine filigree wirework, curling botanical relief, metallic gold wire embroidery, micro-embossing, luxury baroque details`.
+
+---
+
+### PILLAR 2: Modernist, Structural & Architectural
+
+#### 09. Bauhaus
+* **Historical Origin:** 1919 Weimar art school founded by Walter Gropius; "form follows function."
+* **Core Identifiers:** Reductive geometry (circles, triangles, squares), asymmetric grid alignment, universal grotesque typography, absence of decorative filigree.
+* **Palette:** Primary triad (Pure Red, Cobalt Blue, Lemon Yellow) grounded on stark white and solid black.
+* **Prompt Injection Keywords:** `Bauhaus school style, Herbert Bayer typography, minimalist geometric grid, constructivist layout, primary colors, stark functional modernism, unadorned surfaces`.
+
+#### 10. Mid-Century Modern
+* **Historical Origin:** Post-WWII industrial design (approx. 1945–1969).
+* **Core Identifiers:** Organic biomorphic curves paired with clean atomic lines, tapered wooden peg legs, boomerang shapes, functional optimism.
+* **Palette:** Mustard yellow, avocado green, burnt orange, warm walnut wood, muted teal.
+* **Prompt Injection Keywords:** `Mid-century modern design, Eames era aesthetics, biomorphic curves, atomic retro shapes, teak and walnut wood textures, warm kodachrome tones, clean functional typography`.
+
+#### 11. Utilitarian
+* **Historical Origin:** Industrial logistics, military spec design, functional technical manuals.
+* **Core Identifiers:** Monospaced data blocks, metric grid rulers, dynamic barcode/stenciled stamps, non-decorative high-contrast data density, structural rivets.
+* **Palette:** OD green, safety orange, battleship grey, caution yellow, matte black.
+* **Prompt Injection Keywords:** `Utilitarian aesthetic, ISO technical drawing, military spec UI, monospaced typography, barcode labels, crosshair markers, matte technical surfaces, functional diagrammatic layout`.
+
+#### 12. Brutalism (Digital & Architectural)
+* **Historical Origin:** Mid-20th-century raw concrete architecture (*béton brut*), transitioned to digital counter-culture.
+* **Core Identifiers:** Naked HTML aesthetics, unstyled monospaced fonts, raw untreated backgrounds, non-standard layout grids, rejection of user-comfort conventions.
+* **Palette:** Raw cement grey, web-safe blue (`#0000FF`), extreme stark white and black.
+* **Prompt Injection Keywords:** `Digital Brutalism, raw unpolished layout, monospaced terminal fonts, raw concrete texture, non-conformist UI, high-contrast visual tension, zero border-radius`.
+
+#### 13. Neo-Brutalism
+* **Historical Origin:** 2020s digital UI/UX evolution making brutalism commercially functional (Figma/Gumroad era).
+* **Core Identifiers:** Thick solid black borders (`2px–4px`), stark un-blurred drop shadows (hard drop shadows: `box-shadow: 4px 4px 0px #000`), vibrant high-saturation pastel backgrounds, punchy typography.
+* **Palette:** Vibrant chartreuse, electric lavender, neon yellow, stark pure black borders.
+* **Prompt Injection Keywords:** `Neo-brutalist web design, hard drop shadows, high contrast black outlines, vibrant quirky pastel palette, bold modern grotesque type, modular layout, high conversion UI`.
+
+#### 14. Bento Box UI
+* **Historical Origin:** Japanese lunchbox organization adopted by Apple hardware & web interfaces.
+* **Core Identifiers:** Strict compartmentalization, rounded corner cards (`border-radius: 16–24px`), visual hierarchy dictated by cell proportions, micro-animations, self-contained micro-layouts.
+* **Palette:** Neutral grey slate, clean white surfaces, subtle inner borders, translucent backgrounds.
+* **Prompt Injection Keywords:** `Bento box grid layout, modular cards, rounded corners, Apple product presentation style, high visual hierarchy, clean micro-interactions, studio soft shadows`.
+
+#### 15. Modular Typography
+* **Historical Origin:** Modernist structural Swiss posters and contemporary generative type design.
+* **Core Identifiers:** Letterforms assembled from strict primitive modules (quarter-circles, square blocks), typography as the primary geometric image, experimental layout systems.
+* **Palette:** Monochromatic black and white with high-contrast electric accents (e.g., hyper-red, hyper-cobalt).
+* **Prompt Injection Keywords:** `Modular typographic design, geometric grid-based letterforms, experimental type poster, strict structural layout, bold graphic abstraction, vector precision`.
+
+#### 16. Luxury Typography
+* **Historical Origin:** High-fashion editorial (Vogue, Harper's Bazaar) and Parisian couture houses.
+* **Core Identifiers:** High-contrast serif typefaces (Didot, Bodoni) with delicate hairlines, wide kerning (`letter-spacing: 0.3em`), immense whitespace, minimalist layouts.
+* **Palette:** Ivory white, obsidian black, micro-accents of champaign gold, soft taupe.
+* **Prompt Injection Keywords:** `High fashion editorial typography, ultra-high contrast Didone serif font, expansive negative space, minimalist French luxury layout, subtle gold leaf letterpress`.
+
+#### 17. Glassmorphism
+* **Historical Origin:** Windows Vista/Aero evolved into modern iOS / macOS Big Sur design languages.
+* **Core Identifiers:** Multi-layered blurred background surfaces (`backdrop-filter: blur()`), frosted-glass translucency, thin luminous specular borders, deep ambient drop shadows.
+* **Palette:** Dynamic frosted white overlays, vivid rainbow gradient underlays showing through translucent surfaces.
+* **Prompt Injection Keywords:** `Glassmorphism UI, frosted glass texture, blurred transparency, specular edge lighting, floating layered surfaces, soft colorful ambient glows, sleek modern OS interface`.
+
+---
+
+### PILLAR 3: Retro-Futurism, Tech Revival & Digital
+
+#### 18. Pixel Art
+* **Historical Origin:** 1980s 8-bit / 16-bit arcade and console video games (NES, SNES, Genesis).
+* **Core Identifiers:** Hard visible square pixel grid, manual dithering patterns, restricted color indexes (16–256 colors), strict lack of anti-aliasing.
+* **Palette:** Palette swaps, EGA/CGA modes, 16-bit saturated palettes.
+* **Prompt Injection Keywords:** `16-bit pixel art style, hand-crafted sprite aesthetics, manual dithering, retro video game screen, crisp pixel grid, authentic color banding, nostalgia gaming render`.
+
+#### 19. Y2K Aesthetic
+* **Historical Origin:** Circa 1997–2003 hardware, music videos, and fashion (the Dot-com boom era).
+* **Core Identifiers:** Inflatable translucent plastics, chrome and liquid-metal gradients, rave typography, cyber-futuristic optimism, futuristic sunglasses, lens flare reflections.
+* **Palette:** Icy metallic silver, bubblegum pink, iridescent cyan, translucent lime green.
+* **Prompt Injection Keywords:** `Y2K aesthetic, 2000s cyber-optimism, liquid chrome typography, translucent iridescent plastic, glossy lens flares, 3D bubbly forms, late-90s futuristic render`.
+
+#### 20. Neo Frutiger Aero
+* **Historical Origin:** 2004–2012 tech design language (Windows 7/Vista, early OS X, skeuomorphism).
+* **Core Identifiers:** Glossy wet reflections, clear blue skies, tropical fish, water droplets, vibrant green grass inside tech devices, ray of sunlight lens flares, friendly humanist sans-serifs (Frutiger, Segoe).
+* **Palette:** Aqua marine, clean sky blue, brilliant grass green, gloss white.
+* **Prompt Injection Keywords:** `Frutiger Aero aesthetic, glossy skeuomorphic surfaces, transparent water droplets, hyper-clean aqua blue tones, blooming sunshine, green ecological tech optimism, 2008 high-definition render`.
+
+#### 21. Vaporwave
+* **Historical Origin:** Early 2010s internet subculture and musical genre critiquing consumer capitalism.
+* **Core Identifiers:** Greco-Roman busts (David, Venus), Windows 95/98 window dialog boxes, checkered 3D wireframe floors stretching to the horizon, glitch VHS scanlines, Japanese kanji banners.
+* **Palette:** Lilac purple, pastel cyan, neon sunset magenta, soft peach.
+* **Prompt Injection Keywords:** `Vaporwave aesthetic, classical Greek statue bust, Windows 95 desktop icons, retro 3D grid horizon, lo-fi VHS tracking errors, Japanese typography, Arizona Green Tea pastel colors`.
+
+#### 22. Synthwave / Retrowave
+* **Historical Origin:** 1980s pop culture nostalgia; Outrun aesthetic (Miami Vice, Tron, Blade Runner).
+* **Core Identifiers:** Neon grid receding to an oversized wireframe sunset, vector sports cars (Ferrari Testarossa, DeLorean), neon palm tree silhouettes, 3D extruded chrome typography.
+* **Palette:** Electric magenta, laser cyan, deep neon indigo, blinding chrome yellow.
+* **Prompt Injection Keywords:** `Synthwave 80s aesthetic, neon wireframe horizon, glowing laser sunset, chrome typography, Outrun visual style, volumetric purple mist, dark retrofuturistic cyber scene`.
+
+#### 23. Cybercore / Cybergoth
+* **Historical Origin:** Early-2000s underground hacker communities, terminal aesthetics, and Industrial sci-fi.
+* **Core Identifiers:** Monospaced green terminal cascades, cybernetic bio-interfaces, glitch data compression artifacts, HUD telemetry, industrial tech-wear motifs.
+* **Palette:** Matrix green (`#00FF00`), pitch terminal black, blood hazard red, warning amber.
+* **Prompt Injection Keywords:** `Cybercore style, glitch art terminal, military cyberware telemetry, Matrix code rainfall, dark UI dashboard, high-tech hacking interface, green phosphor screen glow`.
+
+---
+
+### PILLAR 4: Organic, Tactile & Serene Atmospheres
+
+#### 24. Japandi
+* **Historical Origin:** Design fusion of Japanese *Wabi-Sabi* and Scandinavian functional minimalism.
+* **Core Identifiers:** Warm muted woods (light oak, hinoki), paper lanterns (washi paper), organic ceramics, disciplined minimalism, soft natural lighting, tranquil breathing space.
+* **Palette:** Warm taupe, oatmeal, soft wheat, charcoal black accents, muted bamboo green.
+* **Prompt Injection Keywords:** `Japandi interior aesthetic, Scandinavian functionality meets Japanese minimalism, light oak wood, washi paper lamp, organic ceramics, soft morning sunlight, tactile linen textures`.
+
+#### 25. Wabi-Sabi
+* **Historical Origin:** Ancient Japanese aesthetic philosophy centered on finding beauty in impermanence and imperfection.
+* **Core Identifiers:** Kintsugi repair lines, coarse unglazed clay, weathered wood grain, broken edges, asymmetric balance, organic raw textures.
+* **Palette:** Stone grey, muddy charcoal, raw umber, dried tea leaves, tarnished iron.
+* **Prompt Injection Keywords:** `Wabi-sabi philosophy, cracked rough ceramic texture, weathered driftwood, asymmetrical balance, organic imperfect form, subtle moody shadows, contemplative natural beauty`.
+
+#### 26. Ethereal
+* **Historical Origin:** Romanticist landscape painting and transcendental visual arts.
+* **Core Identifiers:** Diffusion glows, gauzy fog layers, light leaks, translucent fabrics floating in air, delicate low-contrast light washes, feeling of weightlessness.
+* **Palette:** Mother-of-pearl, soft chalk white, luminous lavender, sheer powder pink.
+* **Prompt Injection Keywords:** `Ethereal aesthetic, weightless floating silk fabrics, dense volumetric morning mist, soft light blooms, dreamlike transcendence, angelic diffused backlighting, shallow depth of field`.
+
+#### 27. Aurora
+* **Historical Origin:** Atmospheric physics (Aurora Borealis/Australis) applied to ambient UI design.
+* **Core Identifiers:** Large, blurred, multi-colored fluid gradient meshes; soft glowing nebulas; floating organic light forms; dark contrast canvases.
+* **Palette:** Luminescent lime, electric violet, glacial cyan, deep space black.
+* **Prompt Injection Keywords:** `Aurora gradient style, flowing organic gradient mesh, Gaussian blur background glow, Northern Lights color shift, luminous smooth colors, ambient dark mode lighting`.
+
+#### 28. Farmhouse & Cottagecore
+* **Historical Origin:** Pastoral idealization of European rural agrarian life.
+* **Core Identifiers:** Distressed rough-sawn wood, gingham checks, dried wildflower bouquets, cast iron skillets, botanical sketches, warm artisanal coziness.
+* **Palette:** Sage, cream, terracotta, buttercup yellow, faded denim blue.
+* **Prompt Injection Keywords:** `Cottagecore lifestyle visual, cozy rustic farmhouse interior, dried wildflower arrangements, rough linen tablecloth, sun-drenched pastoral afternoon, nostalgic rural authenticity`.
+
+#### 29. Bohemian (Boho-Chic)
+* **Historical Origin:** 19th-century Parisian bohemian artists; expanded through 1960s counter-culture.
+* **Core Identifiers:** Layered ethnic patterns, macramé textures, rattan furniture, Moroccan rugs, hanging plants, eclectic collection of handmade objects.
+* **Palette:** Warm terracotta, mustard, burnt sienna, olive green, brass highlights.
+* **Prompt Injection Keywords:** `Bohemian design style, layered moroccan rugs, woven macramé, earthy terracotta pottery, lush indoor jungle houseplants, warm golden hour sunlight, artisanal tactile textures`.
+
+#### 30. Shabby Chic
+* **Historical Origin:** 1980s English country house styling popularized by Rachel Ashwell.
+* **Core Identifiers:** Chalk-painted furniture with worn corners, vintage faded chintz florals, lace overlays, soft antique crystal chandeliers, romantic distressed finishes.
+* **Palette:** Whitewash, faded dusty rose, duck egg blue, antique ivory.
+* **Prompt Injection Keywords:** `Shabby chic design, distressed white antique furniture, faded vintage chintz floral fabric, soft romantic daylight, timeworn cozy elegance, French countryside elements`.
+
+#### 31. Nautical
+* **Historical Origin:** Maritime maritime signaling, ship architecture, coastal lifestyles.
+* **Core Identifiers:** Clean horizontal Breton stripes, thick hemp ropes, polished nautical brass compasses, weathered teak ship decks, maritime signal flags.
+* **Palette:** Classic deep Navy Blue (`#000080`), crisp seafoam white, safety lobster red, polished brass.
+* **Prompt Injection Keywords:** `Nautical design style, classic navy and white Breton stripes, maritime navigation tools, aged brass and polished teak, crisp maritime sunlight, authentic sea-faring aesthetic`.
+
+---
+
+### PILLAR 5: Youth Culture, Subversion & Pop
+
+#### 32. Memphis Design
+* **Historical Origin:** Founded in Milan by Ettore Sottsass in 1981; radical post-modern architecture/design.
+* **Core Identifiers:** Clashing geometric patterns (bacterio pattern squiggles), flat brightly colored laminates, disregard for good taste conventions, playful scale distortions.
+* **Palette:** Primary and secondary collisions (Bright lemon, bubblegum magenta, electric teal, high-contrast black-and-white zigzags).
+* **Prompt Injection Keywords:** `Memphis Group design, Ettore Sottsass aesthetic, 1980s post-modern patterns, squiggles and geometric plastic laminates, clashing pop colors, playful unconventional forms`.
+
+#### 33. Pop Art
+* **Historical Origin:** Mid-1950s British & American art movement (Andy Warhol, Roy Lichtenstein).
+* **Core Identifiers:** Halftone Ben-Day dots, thick heavy black comic outlines, silk-screen color misregistrations, high-contrast commercial iconography, speech bubbles.
+* **Palette:** Flat primary CMYK colors (Pure process cyan, process magenta, process yellow, deep black).
+* **Prompt Injection Keywords:** `Roy Lichtenstein Pop Art style, vintage comic book panel, Ben-Day dot pattern, silk-screen misregistration, high-contrast bold ink outlines, dynamic punchy colors`.
+
+#### 34. Graffiti & Street Art
+* **Historical Origin:** 1970s New York subway culture, evolving into contemporary urban murals.
+* **Core Identifiers:** Drips, fat-cap spray can splatters, expressive wildstyle letterings, stencils on concrete brick walls, torn wheat-paste posters.
+* **Palette:** High-visibility neon spray paint, asphalt grey, rust, industrial brick red.
+* **Prompt Injection Keywords:** `Urban street art graffiti, wildstyle lettering, dripping spray paint splatters, weathered concrete wall background, vibrant layered aerosol textures, authentic raw street culture`.
+
+#### 35. Kitsch
+* **Historical Origin:** 19th-century commercial mass market aesthetic of cheap, sentimental, or ironic appeal.
+* **Core Identifiers:** Deliberate visual excess, fake crystal rhinestones, high-gloss molded plastics, hyper-sentimental pop icons, ironic bad taste.
+* **Palette:** Hyper-saturated neon pastels, tacky gold lamé, high-gloss flamingo pink.
+* **Prompt Injection Keywords:** `Ironic kitsch aesthetic, campy visual excess, glossy plastic textures, retro 1960s suburban memorabilia, over-saturated flash photography, intentional bad-taste design`.
+
+#### 36. Pointillism
+* **Historical Origin:** Neo-Impressionist painting technique developed by Georges Seurat in 1886.
+* **Core Identifiers:** Images formed exclusively through micro-dots of pure color; optical mixing (the eye blends dots at a distance); grain-like visual vibration.
+* **Palette:** Broken chromatic tones, impressionist light palettes.
+* **Prompt Injection Keywords:** `Pointillism art style, Georges Seurat technique, composed entirely of micro color dots, stippling optical color blending, textured painterly surface, vibrant visual vibration`.
+
+#### 37. Mixed Media & Collage
+* **Historical Origin:** Dadaists (Hannah Höch) and 20th-century editorial graphic design.
+* **Core Identifiers:** Ripped magazine paper edges, overlapping halftone photos with rough ink scribbles, textured masking tape, combined digital vector with physical scans.
+* **Palette:** Unrestricted; typically combines low-fi vintage newsprint with hyper-vivid modern paint strokes.
+* **Prompt Injection Keywords:** `Mixed media collage art, ripped paper edges, combined vintage photography and hand-painted acrylic textures, visible washi tape, layered dynamic tactile depth`.
+
+#### 38. Scrapbook
+* **Historical Origin:** DIY personal journaling and analog photo album culture.
+* **Core Identifiers:** Instant camera (Polaroid) white frames, translucent patterned washi tape, craft scissors zig-zag cut edges, handwritten notes, pressed dried leaves.
+* **Palette:** Muted nostalgia tones, kraft paper brown, pastel marker accents.
+* **Prompt Injection Keywords:** `Scrapbook journaling aesthetic, physical Polaroid photo frames, washi tape strips, handwritten cursive notes, craft paper collage, warm intimate nostalgic layout`.
+
+#### 39. Conceptual Sketch
+* **Historical Origin:** Leonardo da Vinci notebooks, industrial design concept brainstorming.
+* **Core Identifiers:** Rapid loose graphite or ink lines, visible construction/perspective guides, crosshatch shading, callout text arrows, textured parchment or blueprint background.
+* **Palette:** Graphite pencil grey, sepia ink, blueprint blue, aged cream parchment.
+* **Prompt Injection Keywords:** `Industrial design conceptual sketch, loose pencil ideation lines, crosshatched shading, perspective layout lines, technical design notebook page, rough artistic ideation`.
+
+---
+
+### PILLAR 6: Niche Narrative, Worldbuilding & Sub-Aesthetics
+
+#### 40. Steampunk
+* **Historical Origin:** 1980s literary sci-fi subgenre imagining Victorian-era technology powered by steam.
+* **Core Identifiers:** Exposed brass clockwork gears, vacuum tubes, copper steam pipes, pressure gauges, leather aviator goggles, rivets.
+* **Palette:** Antique brass, tarnished copper, aged saddle leather, soot black, amber glass.
+* **Prompt Injection Keywords:** `Steampunk machinery aesthetic, complex brass clockwork cogs, pressurized copper pipes, glowing vacuum tubes, polished mahogany, rich Victorian industrial engine details`.
+
+#### 41. Dark Magic Academia
+* **Historical Origin:** Internet dark academic subculture blended with gothic occult fantasy.
+* **Core Identifiers:** Dusty leather-bound grimoires, melting beeswax candles, taxidermy, astronomical armillary spheres, skull studies, alchemical diagrams.
+* **Palette:** Antique parchment, dried blood red, deep walnut wood, shadowy black, muted brass.
+* **Prompt Injection Keywords:** `Dark Magic Academia aesthetic, ancient alchemical laboratory, leather-bound spell books, melting tallow candles, arcane astrology charts, deep shadows, scholarly mystery`.
+
+#### 42. Light Academia
+* **Historical Origin:** Classical Eurocentric academic aesthetic celebrating literature, poetry, and art history.
+* **Core Identifiers:** Sunlit classical museum halls, marble statues, vintage fountain pens, open classic books, wire-rimmed spectacles, linen Oxford shirts.
+* **Palette:** Warm cream, ecru, soft camel, cappuccino brown, soft plaster white.
+* **Prompt Injection Keywords:** `Light Academia aesthetic, sun-drenched European university library, vintage classical literature, soft linen textures, marble classical busts, warm literary contemplation`.
+
+#### 43. Surrealism
+* **Historical Origin:** 1920s Paris movement founded by André Breton (Salvador Dalí, René Magritte).
+* **Core Identifiers:** Dream logic juxtapositions, melting physical objects, impossible physics, floating monolithic eyes, desolate hyper-crisp landscapes.
+* **Palette:** High-desert saturated blues, scorched yellows, unexpected stark hyper-real colors.
+* **Prompt Injection Keywords:** `Surrealist masterpiece, Salvador Dalí dreamscape, impossible gravity-defying architecture, melting clocks, deep expansive horizon, uncanny symbolic juxtaposition`.
+
+#### 44. Mystical Western
+* **Historical Origin:** Southwestern American desert lore fused with esoteric tarot symbolism.
+* **Core Identifiers:** Bleached steer skulls, celestial sun/moon line drawings, blooming saguaro cactus, hand-tooled leather, tarot frame layouts.
+* **Palette:** Adobe terracotta, turquoise blue, sun-bleached bone white, desert clay red.
+* **Prompt Injection Keywords:** `Mystical Western aesthetic, desert occultism, celestial sun motifs, coyote skull, hand-tooled leather texture, turquoise inlay, rustic magical realism`.
+
+#### 45. South West / Wild West
+* **Historical Origin:** 19th-century American frontier, Native Navajo patterns, cowboy workwear.
+* **Core Identifiers:** Distressed raw denim, weathered barnwood, woven Southwestern geometric textiles, heavy slab-serif woodblock typography, cast iron spurs.
+* **Palette:** Raw denim blue, burnt terracotta, desert sand, raw saddle tan.
+* **Prompt Injection Keywords:** `Authentic Wild West style, weathered ranch textures, Southwestern woven blanket patterns, rustic frontier leather, heavy slab-serif typography, dusty golden hour light`.
+
+#### 46. Kawaii
+* **Historical Origin:** 1970s Japanese culture of cuteness (Sanrio, Hello Kitty).
+* **Core Identifiers:** Simplistic hyper-deformed proportions (Chibi: large head, tiny body), wide sparkling eyes with blush marks, rounded organic forms, absence of sharp angles.
+* **Palette:** Soft pastel strawberry milk, mint cream, baby yellow, soft lavender.
+* **Prompt Injection Keywords:** `Authentic Japanese Kawaii style, rounded cute character design, soft blushing cheeks, sparkling anime eyes, pastel toy aesthetic, cheerful and friendly visual universe`.
+
+#### 47. Coquette
+* **Historical Origin:** Early 2020s social media youth movement synthesizing historical French Rococo and 90s vintage romance.
+* **Core Identifiers:** Satin ribbon bows, dainty pearl strands, sheer vintage lace, delicate cursive typography, soft focus romantic film glow.
+* **Palette:** Powder ballet pink, vintage cream, soft strawberry red, pearlescent white.
+* **Prompt Injection Keywords:** `Coquette aesthetic, delicate satin ribbon bows, vintage French lace textures, strands of pearls, soft romantic flash photography, dreamy feminine nostalgia`.
+
+#### 48. Anthropomorphic Design
+* **Historical Origin:** Ancient mythology through 20th-century mascot branding and animation (Disney, Fleischer).
+* **Core Identifiers:** Giving human biological traits (expressive faces, hands, emotive postures) to inanimate products, tools, plants, or interface components.
+* **Palette:** Contextual; generally bright, accessible, and vibrant for immediate recognition.
+* **Prompt Injection Keywords:** `Anthropomorphic character design, inanimate everyday object brought to life with expressive eyes and limbs, friendly vintage mascot style, dynamic emotive posing`.
+
+#### 49. Rebus
+* **Historical Origin:** Medieval heraldry, Renaissance visual wordplay, and modernist pictographic communication (Paul Rand's IBM poster).
+* **Core Identifiers:** Replacing phonemes or words with literal iconography, visual puzzles, graphic-to-linguistic puzzles, structural pictograms.
+* **Palette:** High-contrast graphic palettes (typically stark black on colored backdrops).
+* **Prompt Injection Keywords:** `Rebus visual puzzle, Paul Rand graphic design style, clever visual pun, minimalist pictogram alignment, conceptual graphic riddle, clean structural clarity`.
+
+#### 50. Neo-Frutiger / Translucent Gloss UI
+* **Historical Origin:** Modern 3D digital illustration blending Claymorphism, Frutiger Aero, and modern 3D UI.
+* **Core Identifiers:** Thick, squishy, pneumatic 3D shapes, high subsurface scattering, pillowy round icons, jelly-like translucent candy buttons.
+* **Palette:** Translucent bubblegum, electric cyan jelly, bright lime, soft studio grey backdrop.
+* **Prompt Injection Keywords:** `Claymorphism meets Frutiger Aero, 3D pillowy inflated UI icons, jelly translucent plastic material, deep subsurface scattering, soft occlusion shadows, tactile cute 3D render`.
+
+---
+
+## 4. The Style-Blending Engine (Hybrid Synthesis)
+
+The highest tier of creative direction comes from fusing two disparate style DNAs. When prompting or directing, balance **70% of a Base Structural Style** with **30% of an Accent Ornamental Style**.
+
+### High-Value Creative Syntheses
+
+```
+┌───────────────────────────┐      ┌───────────────────────────┐
+│   BASE: Minimal / Tech    │  +   │ ACCENT: Historical/Organic│
+└─────────────┬─────────────┘      └─────────────┬─────────────┘
+              │                                  │
+              ▼                                  ▼
+    1. Digital Brutalism        ×       Baroque Opulence
+       ↳ Monospaced layouts wrapped in heavy ornate gold leaf filigree.
+    
+    2. Bento Box Grid           ×       Japandi Tactility
+       ↳ High-structure modular cards made of light oak wood, linen, & washi paper.
+    
+    3. Cybercore Telemetry      ×       Tenebrism / Chiaroscuro
+       ↳ Deep pitch-black voids with single-source spotlighting hitting HUD code.
+    
+    4. Neo-Brutalism (Hard Edge)×       Kawaii / Coquette
+       ↳ Heavy 3px solid black outlines enclosing baby pink bows and soft pillowy buttons.
+```
+
+---
+
+## 5. Master Diffusion Prompt Construction Template
+
+Use this format to construct production-ready Midjourney v6 / Flux.1 prompts based on this design vocabulary:
+
+```markdown
+/imagine prompt: [Subject / Content / Screen Type], 
+inspired by [Style 1] and infused with [Style 2], 
+featuring [Specific Core Elements: e.g., Corinthian columns / 3px solid borders / frosted glass cards], 
+crafted with [Materials / Textures: e.g., Carrara marble / brushed aluminum / matte clay], 
+illuminated by [Lighting Spec: e.g., Caravaggio dramatic chiaroscuro / soft diffused morning rays], 
+rendered in [Color Palette: e.g., chartreuse, jet black, and soft lavender], 
+--ar 16:9 --style raw --v 6.0
+```
+
+### Real-World Production Examples:
+
+* **Example 1 (Luxury Fintech App UI):**
+  > `/imagine prompt: Mobile banking app interface for high-net-worth wealth management, Neo-Brutalism meets Luxury Typography style, modular bento layout cards, high letter-spaced Didone serif numbers, ultra-fine 1px borders with subtle brass hardware inlays, obsidian and ivory color palette, clean daylight studio lighting, Figma UI kit mockup --ar 9:16 --v 6.0`
+
+* **Example 2 (Hardware Product Design):**
+  > `/imagine prompt: Smart home climate control thermostat device, Japandi aesthetic fused with Neo Frutiger Aero, matte light hinoki wood shell with a curved translucent aqua-glass interface, soft diffused volumetric light, tactile minimalist buttons, tranquil spa atmosphere --ar 16:9 --v 6.0`
